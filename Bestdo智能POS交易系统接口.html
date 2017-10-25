@@ -216,10 +216,10 @@
   <td align="center"></td>
 </tr>
 <tr>
-  <td align="center">menuName</td>
+  <td align="center">menuTitle</td>
   <td align="center">String</td>
   <td align="center">M</td>
-  <td align="center">菜单名</td>
+  <td align="center">菜单标题</td>
   <td align="center"></td>
 </tr>
 <tr>
@@ -308,9 +308,58 @@
 </tbody></table>
 
 
-
-
-<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">    更新了啊
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">    {
+</div><div class="hljs-line">  <span class="hljs-attr">"code"</span>: <span class="hljs-number">200</span>,
+</div><div class="hljs-line">  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"操作成功"</span>,
+</div><div class="hljs-line">  <span class="hljs-attr">"content"</span>: {
+</div><div class="hljs-line">    <span class="hljs-attr">"menuversion"</span>: <span class="hljs-string">"menuversion"</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">"menu"</span>: [
+</div><div class="hljs-line">      {
+</div><div class="hljs-line">        <span class="hljs-attr">"menuId"</span>: <span class="hljs-string">"0"</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">"menuTitle"</span>: <span class="hljs-string">"权益验证"</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">"menuUrl"</span>: <span class="hljs-string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1508912345631&amp;di=34362730cd369f149efd7ab7c9daa8af&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.th7.cn%2Fd%2Ffile%2Fp%2F2014%2F03%2F12%2F46384e9c3ac77e71ee2cefba9e2056b8.jpg"</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">"menuDes"</span>: <span class="hljs-string">"优惠抵扣、权益兑换"</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">"leafMenu"</span>: <span class="hljs-string">""</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">"subMenus"</span>: [
+</div><div class="hljs-line">          {
+</div><div class="hljs-line">            <span class="hljs-attr">"menuId"</span>: <span class="hljs-string">"01"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"menuTitle"</span>: <span class="hljs-string">"权益验证"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"menuUrl"</span>: <span class="hljs-string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1508912345631&amp;di=34362730cd369f149efd7ab7c9daa8af&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.th7.cn%2Fd%2Ffile%2Fp%2F2014%2F03%2F12%2F46384e9c3ac77e71ee2cefba9e2056b8.jpg"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"menuDes"</span>: <span class="hljs-string">"xxxxx"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"leafMenu"</span>: {
+</div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"VIS"</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5006</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
+</div><div class="hljs-line">
+</div><div class="hljs-line">            ]
+</div><div class="hljs-line">          },
+</div><div class="hljs-line">          {
+</div><div class="hljs-line">            <span class="hljs-attr">"menuId"</span>: <span class="hljs-string">"02"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"menuTitle"</span>: <span class="hljs-string">"权益验证"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"menuUrl"</span>: <span class="hljs-string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1508912345631&amp;di=34362730cd369f149efd7ab7c9daa8af&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.th7.cn%2Fd%2Ffile%2Fp%2F2014%2F03%2F12%2F46384e9c3ac77e71ee2cefba9e2056b8.jpg"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"menuDes"</span>: <span class="hljs-string">"xxxxx"</span>,
+</div><div class="hljs-line">            <span class="hljs-attr">"leafMenu"</span>: {
+</div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"BOC"</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5006</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
+</div><div class="hljs-line">
+</div><div class="hljs-line">            ]
+</div><div class="hljs-line">          }
+</div><div class="hljs-line">        ]
+</div><div class="hljs-line">      }
+</div><div class="hljs-line">    ]
+</div><div class="hljs-line">  }
+</div><div class="hljs-line">}
 </div></code></pre>
 
 <h3 id="32-请求交易接口">3.2 请求交易接口</h3>
@@ -683,9 +732,11 @@
   <td align="center">交通银行</td>
   <td align="center">BCM</td>
 </tr>
+<tr>
+  <td align="center">visa</td>
+  <td align="center">VIS</td>
+</tr>
 </tbody></table>
-
-
 
 
 <h3 id="42交易类型对照表">4.2交易类型对照表</h3>
