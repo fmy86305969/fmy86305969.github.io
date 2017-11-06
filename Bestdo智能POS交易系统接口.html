@@ -9,8 +9,8 @@
 
 <h1 id="bestdo智能pos交易系统接口"><center>Bestdo智能POS交易系统接口</center></h1>
 
-<p></p><center>文档版本1.5  </center> <br>
-<center>最后更新：2017/11/1</center> <br>
+<p></p><center>文档版本1.6  </center> <br>
+<center>最后更新：2017/11/6</center> <br>
 <center><em>本文档所有内容及其附件均属于私有资产，未经书面授权，任何组织或个人不得以任何形式向第三方泄露或者使用文档中的任何信息，违者将追究法律责任。</em> <br>
 </center>s<p></p>
 
@@ -119,15 +119,15 @@
 
 <h3 id="23以下接口需要采用数据加密">2.3以下接口需要采用数据加密</h3>
 
-<ul><li><p>请求交易接口 <br>
+<ul><li>请求交易接口 <br>
 将传入的json整体进行aes加密方式以及sign <br>
-如下代码:</p>
-
-<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line"> {<span class="hljs-attr">"data"</span>:AES(data),<span class="hljs-attr">"sign"</span>:MD5(AES(data))}
-</div></code></pre></li>
+如下代码:</li>
 </ul>
 
 
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line"> {<span class="hljs-attr">"data"</span>:AES(data),<span class="hljs-attr">"sign"</span>:MD5(AES(data))}
+</div></code></pre>
 
 <h3 id="24调用地址">2.4调用地址</h3>
 
@@ -285,7 +285,7 @@
 </tr>
 <tr>
   <td align="center">transType</td>
-  <td align="center">int</td>
+  <td align="center">String</td>
   <td align="center">M</td>
   <td align="center">交易类型<a href="#jump">附录</a></td>
   <td align="center"></td>
@@ -299,13 +299,16 @@
 </tr>
 <tr>
   <td align="center">transMoney</td>
-  <td align="center">float</td>
+  <td align="center">String</td>
   <td align="center">N</td>
   <td align="center">交易所需金额</td>
   <td align="center">保留后两位小数</td>
 </tr>
 </tbody></table>
 
+
+<ul><li>返回json如下</li>
+</ul>
 
 
 
@@ -333,9 +336,9 @@
 </div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"VIS"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5006</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5006"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-string">"0.00"</span>
 </div><div class="hljs-line">            },
 </div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
 </div><div class="hljs-line">
@@ -361,9 +364,9 @@
 </div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"BOS"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5001</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5001"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-string">"0.00"</span>
 </div><div class="hljs-line">            },
 </div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
 </div><div class="hljs-line">
@@ -378,9 +381,9 @@
 </div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"BOS"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5002</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5002"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">3000</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-string">"0.00"</span>
 </div><div class="hljs-line">            },
 </div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
 </div><div class="hljs-line">
@@ -406,9 +409,9 @@
 </div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"BOC"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5003</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5003"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">0</span>
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-string">"0.00"</span>
 </div><div class="hljs-line">            },
 </div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
 </div><div class="hljs-line">
@@ -423,9 +426,9 @@
 </div><div class="hljs-line">              <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"BOC"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"isVerify"</span>: <span class="hljs-number">1</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transName"</span>: <span class="hljs-string">"XXXXXX"</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5004</span>,
+</div><div class="hljs-line">              <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5004"</span>,
 </div><div class="hljs-line">              <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
-</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-number">100</span>
+</div><div class="hljs-line">              <span class="hljs-attr">"transMoney"</span>: <span class="hljs-string">"100.00"</span>
 </div><div class="hljs-line">            },
 </div><div class="hljs-line">            <span class="hljs-attr">"submenus"</span>: [
 </div><div class="hljs-line">
@@ -437,6 +440,8 @@
 </div><div class="hljs-line">  }
 </div><div class="hljs-line">}
 </div></code></pre>
+
+
 
 <h3 id="32-请求交易接口">3.2 请求交易接口</h3>
 
@@ -460,7 +465,7 @@
   <td align="center">String</td>
   <td align="center">M</td>
   <td align="center">交易设备终端号</td>
-  <td align="center"></td>
+  <td align="center">md5加密</td>
 </tr>
 <tr>
   <td align="center">companyCode</td>
@@ -478,7 +483,7 @@
 </tr>
 <tr>
   <td align="center">transMoney</td>
-  <td align="center">int</td>
+  <td align="center">String</td>
   <td align="center">M</td>
   <td align="center">交易金额</td>
   <td align="center"></td>
@@ -520,6 +525,26 @@
 </tr>
 </tbody></table>
 
+
+<ul><li>请求json如下</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">{<span class="hljs-attr">"data"</span>:AES(data),<span class="hljs-attr">"sign"</span>:MD5(AES(data))}
+</div><div class="hljs-line">
+</div><div class="hljs-line">    其中:data = { <span class="hljs-attr">"tid"</span>: <span class="hljs-string">"327aeada443b05b136cd26701e9c0b3f"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"companyCode"</span>: <span class="hljs-string">"BOC"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5006"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"transMoney"</span>: <span class="hljs-string">"100.00"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"cardNo"</span>: <span class="hljs-string">"62888888888888"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"expiryDate"</span>: <span class="hljs-string">"0000"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"pin"</span>: <span class="hljs-string">"********"</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-number">0</span>,
+</div><div class="hljs-line">                  <span class="hljs-attr">"swift"</span>: <span class="hljs-string">"000001"</span>
+</div><div class="hljs-line">                }
+</div><div class="hljs-line">
+</div></code></pre>
 
 <ul><li>交易返回信息（待扩展）</li>
 </ul>
@@ -592,7 +617,7 @@
 </tr>
 <tr>
   <td align="center">transType</td>
-  <td align="center">int</td>
+  <td align="center">String</td>
   <td align="center">M</td>
   <td align="center">交易类型</td>
   <td align="center"></td>
@@ -642,7 +667,8 @@
 </tbody></table>
 
 
-
+<ul><li>返回json如下</li>
+</ul>
 
 <pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">    {
 </div><div class="hljs-line">  <span class="hljs-attr">"code"</span>: <span class="hljs-number">200</span>,
@@ -656,7 +682,7 @@
 </div><div class="hljs-line">    <span class="hljs-attr">"transIntegral"</span>: <span class="hljs-string">"3000"</span>,
 </div><div class="hljs-line">    <span class="hljs-attr">"realityMoney"</span>: <span class="hljs-string">"0.00"</span>,
 </div><div class="hljs-line">    <span class="hljs-attr">"cutMoney"</span>: <span class="hljs-string">"0.00"</span>,
-</div><div class="hljs-line">    <span class="hljs-attr">"transType"</span>: <span class="hljs-number">5006</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">"transType"</span>: <span class="hljs-string">"5006"</span>,
 </div><div class="hljs-line">    <span class="hljs-attr">"verifyCode"</span>: <span class="hljs-number">1000</span>,
 </div><div class="hljs-line">    <span class="hljs-attr">"orderNo"</span>: <span class="hljs-string">"2017102600088888"</span>,
 </div><div class="hljs-line">    <span class="hljs-attr">"batchNo"</span>: <span class="hljs-string">"无"</span>,
@@ -669,8 +695,6 @@
 </div><div class="hljs-line">  }
 </div><div class="hljs-line">}
 </div></code></pre>
-
-
 
 <h3 id="33-菜单升级">3.3  菜单升级</h3>
 
@@ -729,7 +753,7 @@
   <td align="center">tid</td>
   <td align="center">String</td>
   <td align="center">M</td>
-  <td align="center">设备终端号</td>
+  <td align="center">设备终端号(sn+imei)</td>
   <td align="center">md5加密</td>
 </tr>
 </tbody></table>
@@ -770,8 +794,6 @@
   <td align="center">签到成功返回</td>
 </tr>
 </tbody></table>
-
-
 
 
 <h3 id="35交易记录查询">3.5交易记录查询</h3>
