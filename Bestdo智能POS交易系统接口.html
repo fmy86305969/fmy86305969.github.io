@@ -9,10 +9,10 @@
 
 <h1 id="bestdo智能pos交易系统接口"><center>Bestdo智能POS交易系统接口</center></h1>
 
-<p></p><center>文档版本2.0  </center> <br>
-<center>最后更新:2017/11/7</center> <br>
+<p></p><center>文档版本2.1 </center> <br>
+<center>最后更新:2017/11/8</center> <br>
 <center><em>本文档所有内容及其附件均属于私有资产，未经书面授权，任何组织或个人不得以任何形式向第三方泄露或者使用文档中的任何信息，违者将追究法律责任。</em> <br>
-</center>s<p></p>
+</center><p></p>
 
 <hr>
 
@@ -304,14 +304,21 @@
   <td align="center">int</td>
   <td align="center">N</td>
   <td align="center">交易所需积分</td>
-  <td align="center"></td>
+  <td align="center">暂时不传</td>
 </tr>
 <tr>
   <td align="center">transMoney</td>
   <td align="center">String</td>
   <td align="center">N</td>
   <td align="center">交易所需金额</td>
-  <td align="center">保留后两位小数</td>
+  <td align="center">暂时不传</td>
+</tr>
+<tr>
+  <td align="center">transMsg</td>
+  <td align="center"><code>List&lt;String&gt;</code></td>
+  <td align="center">M</td>
+  <td align="center">交易信息</td>
+  <td align="center"></td>
 </tr>
 </tbody></table>
 
@@ -358,6 +365,8 @@
 </div><div class="hljs-line">  }
 </div><div class="hljs-line">}
 </div></code></pre>
+
+
 
 <h3 id="32-请求交易接口">3.2 请求交易接口</h3>
 
@@ -451,6 +460,8 @@
 
 <ul><li>请求json如下</li>
 </ul>
+
+
 
 <pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">{<span class="hljs-attr">"data"</span>:AES(data),<span class="hljs-attr">"sign"</span>:MD5(AES(data))}
 </div><div class="hljs-line">
@@ -556,13 +567,6 @@
   <td align="center">暂时不传</td>
 </tr>
 <tr>
-  <td align="center">transMsg</td>
-  <td align="center"><code>List&lt;String&gt;</code></td>
-  <td align="center">M</td>
-  <td align="center">交易信息</td>
-  <td align="center"></td>
-</tr>
-<tr>
   <td align="center">transBank</td>
   <td align="center">String</td>
   <td align="center">M</td>
@@ -592,6 +596,8 @@
 </div><div class="hljs-line">  }
 </div><div class="hljs-line">}
 </div></code></pre>
+
+
 
 <h3 id="33-菜单升级">3.3  菜单升级</h3>
 
