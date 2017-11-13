@@ -9,8 +9,8 @@
 
 <h1 id="bestdo智能pos交易系统接口"><center>Bestdo智能POS交易系统接口</center></h1>
 
-<p></p><center>文档版本2.1 </center> <br>
-<center>最后更新:2017/11/8</center> <br>
+<p></p><center>文档版本2.2 </center> <br>
+<center>最后更新:2017/11/13</center> <br>
 <center><em>本文档所有内容及其附件均属于私有资产，未经书面授权，任何组织或个人不得以任何形式向第三方泄露或者使用文档中的任何信息，违者将追究法律责任。</em> <br>
 </center><p></p>
 
@@ -315,10 +315,10 @@
 </tr>
 <tr>
   <td align="center">transMsg</td>
-  <td align="center"><code>List&lt;String&gt;</code></td>
+  <td align="center">String</td>
   <td align="center">M</td>
   <td align="center">交易信息</td>
-  <td align="center"></td>
+  <td align="center">多条信息已;号隔开</td>
 </tr>
 </tbody></table>
 
@@ -579,6 +579,8 @@
 <ul><li>返回json如下</li>
 </ul>
 
+
+
 <pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">    {
 </div><div class="hljs-line">  <span class="hljs-attr">"code"</span>: <span class="hljs-number">200</span>,
 </div><div class="hljs-line">  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"操作成功"</span>,
@@ -785,11 +787,9 @@
 </tr>
 <tr>
   <td align="center">visa</td>
-  <td align="center">VIS</td>
+  <td align="center">VISA</td>
 </tr>
 </tbody></table>
-
-
 
 
 <h3 id="42交易类型对照表">4.2交易类型对照表</h3>
@@ -848,12 +848,12 @@
   <td align="center">找不到订单</td>
 </tr>
 <tr>
-  <td align="center">1003</td>
-  <td align="center">场馆不匹配</td>
-</tr>
-<tr>
   <td align="center">1002</td>
   <td align="center">找不到此用户</td>
+</tr>
+<tr>
+  <td align="center">1003</td>
+  <td align="center">非法设备</td>
 </tr>
 <tr>
   <td align="center">1004</td>
